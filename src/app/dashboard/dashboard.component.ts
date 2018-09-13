@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../music.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  serviceActive: boolean = false;
+
+  constructor( private music: MusicService ) { }
 
   ngOnInit() {
+    this.serviceActive =  this.music.serviceTest;
   }
 
 }
