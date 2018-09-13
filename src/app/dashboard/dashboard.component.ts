@@ -8,12 +8,10 @@ import { MusicService } from '../music.service';
 })
 export class DashboardComponent implements OnInit {
 
-  serviceActive: boolean = false;
-
   constructor( private music: MusicService ) { }
 
   ngOnInit() {
-    this.serviceActive =  this.music.serviceTest;
+    this.music.getMusicGalery();
   }
 
 }
