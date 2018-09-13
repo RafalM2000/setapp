@@ -1,27 +1,47 @@
-# Setapp
+#Front End Challenge
+This is a coding challenge to assess your qualifications as a potential front-end developer. This is by no means a test. We just want to get a sense of how you write code and solve problems.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+You can choose your own path that reflects your technical skills along the way. Spend as little or as much time as you would like to complete your chosen path.
 
-## Development server
+#The Challenge
+Imagine, one of our clients is branching into the music business and need a new a website. This website needs to display the top 100 songs based on the iTunes API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Base Requirements For All Levels
+Show top 100 albums based on the json feed here: https://itunes.apple.com/us/rss/topalbums/limit=100/json
+A clean modern look
+Clean, readable, maintainable codebase
+Source code on Github
+Cross browser support (or graceful degradation)
+Responsive design and implementation
+A good user experience
+Levels of Awesome
+Please choose one of the following routes:
 
-## Code scaffolding
+#Novice
+TASKS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+All of the base requirements
+Create and implement (HTML, CSS and JS) a basic design
+Use a CSS Framework (Bootstrap, Bulma, Foundation, uikit, etc.…)
+Intermediate
+TASKS
 
-## Build
+All of the base, and novice requirements
+Use a JavaScript framework (Angular, React, Vue, etc...)
+Use LESS or SASS for custom CSS
+Make use of CSS animations
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#Expert
+TASKS
 
-## Running unit tests
+All of the base, novice, and intermediate requirements
+Allow the top 100 to be searchable
+Allow the user to see more information about a selected Album
+Host the website on the service of your choice (We enjoy cloud hosting like Azure or AWS, but we would also settle for a *.github.io address)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#Bonus Round
+TASKS
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Use a language that compiles to JavaScript (CoffeeScript, TypeScript, etc...)
+Surprise us! Add a feature that you think would work well here
+Show us your work through your commit history (don't squash)!
