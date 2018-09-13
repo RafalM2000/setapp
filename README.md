@@ -23,7 +23,8 @@ TASKS
 All of the base requirements
 Create and implement (HTML, CSS and JS) a basic design
 Use a CSS Framework (Bootstrap, Bulma, Foundation, uikit, etc.…)
-Intermediate
+
+#Intermediate
 TASKS
 
 All of the base, and novice requirements
