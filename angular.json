@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "setapp"
+  "defaultProject": "setapp",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
