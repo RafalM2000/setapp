@@ -8,10 +8,16 @@ import { MusicService } from '../music.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor( private music: MusicService ) { }
+  musicAlbums: any;
+
+  constructor( private _music: MusicService ) { }
 
   ngOnInit() {
-    this.music.getMusicGalery();
+    this._music.getMusicGalery().then(
+      (val) => console.log(this._music.albumList.feed.entry),
+      (err) => console.log(err),
+    )
+    
   }
 
 }

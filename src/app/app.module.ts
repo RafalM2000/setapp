@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MusicService } from './music.service';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ MusicService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+
 export class MusicService {
-  albumList: any[];
+  albumList: any;
 
   constructor(private _http: HttpClient) { }
 
-
-  getMusicGalery(){
-    let _url =`https://itunes.apple.com/us/rss/topalbums/limit=100/json`
-    return this._http.get(_url)
-    .subscribe(
-      (data: any[]) => {
-          this.albumList = data;
-          console.log(this.albumList);
-      } 
-    )
+  getMusicGalery() {
+        let promise = new Promise((resolve, reject) => {
+        let _url =`https://itunes.apple.com/us/rss/topalbums/limit=100/json`;
+        return this._http.get(_url)
+        .toPromise()
+        .then(
+        res => { // Success
+          this.albumList = res;
+          resolve();
+          },
+          msg => { // Error
+          reject(msg);
+          }
+        );
+    });
+    return promise;
   }
-
 }
