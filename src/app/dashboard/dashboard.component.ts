@@ -9,6 +9,7 @@ import { MusicService } from '../music.service';
 export class DashboardComponent implements OnInit {
 
   albumCollection= [];
+  searchName: string;
 
   constructor( private _music: MusicService ) { }
 
@@ -30,6 +31,11 @@ export class DashboardComponent implements OnInit {
         price: data[i]['im:price'].label}
       ) 
     }
+    console.log(this.albumCollection)
+  }
+
+  searchTerm(data) {
+    this.searchName = data;
   }
 
 }

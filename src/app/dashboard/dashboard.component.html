@@ -1,8 +1,8 @@
-<app-search></app-search>
+<app-search (searchTerms)="searchTerm($event)"></app-search>
 
 <div class="container" >
     <div *ngFor="let item of albumCollection"> 
-        <div class="card">
+        <div *ngIf = "!searchName  || item.name.toLowerCase().search(searchName.toLowerCase()) != -1"  class="card">
             <img src={{item.url}} width=150px;>                     
         </div> 
     </div>
