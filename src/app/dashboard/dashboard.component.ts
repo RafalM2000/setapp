@@ -8,16 +8,28 @@ import { MusicService } from '../music.service';
 })
 export class DashboardComponent implements OnInit {
 
-  musicAlbums: any;
+  albumCollection= [];
 
   constructor( private _music: MusicService ) { }
 
   ngOnInit() {
     this._music.getMusicGalery().then(
-      (val) => console.log(this._music.albumList.feed.entry),
+      (val) => {
+                this.createAlbumCollection(this._music.albumList.feed.entry)
+              },
       (err) => console.log(err),
-    )
-    
+    )    
+  }
+
+  createAlbumCollection(data) {  
+    for (let i=0; i < data.length; i++) {
+      this.albumCollection.push(
+        {name: data[i]['im:name'].label,
+        artist: data[i]['im:artist'].label,
+        url: data[i]['im:image'][2].label,
+        price: data[i]['im:price'].label}
+      ) 
+    }
   }
 
 }
