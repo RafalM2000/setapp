@@ -1,10 +1,11 @@
 <app-search (searchTitle)="getTitle($event)" (searchArtist)="getArtist($event)"></app-search>
 
+<app-details [album]="album"></app-details>
 <div class="albums" >
-    <div *ngFor="let item of albumCollection"> 
+    <div *ngFor="let item of albumCollection; let i of index"> 
         <div *ngIf = "(!searchTitle  || item.name.toLowerCase().search(searchTitle.toLowerCase()) != -1) &&
         (!searchArtist  || item.artist.toLowerCase().search(searchArtist.toLowerCase()) != -1)" class="album">
-            <img src={{item.url}}>                     
+            <img src={{item.url}} (click) = "details(i)">                     
         </div> 
     </div>
 </div>

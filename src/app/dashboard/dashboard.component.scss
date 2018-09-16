@@ -1,5 +1,13 @@
+app-search {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;    
+}
+
 .albums {
-    margin-top: 20px;
+    position: relative;
+    top: 240px;
 }
 
 .album {
@@ -16,4 +24,5 @@ img:hover {
 img {
     width: 250px;
     height: 250px;
+    z-index: -1;
 }

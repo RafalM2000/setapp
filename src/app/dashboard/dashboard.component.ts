@@ -9,6 +9,7 @@ import { MusicService } from '../music.service';
 export class DashboardComponent implements OnInit {
 
   albumCollection= [];
+  album = {};
   searchTitle: string;
   searchArtist: string;
 
@@ -40,8 +41,11 @@ export class DashboardComponent implements OnInit {
   }
 
   getArtist(data) {
-    console.log(data);
     this.searchArtist = data;
+  }
+
+  details(singleAlbum) {
+    this.album = singleAlbum;
   }
 
 }
