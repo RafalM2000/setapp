@@ -9,7 +9,8 @@ import { MusicService } from '../music.service';
 export class DashboardComponent implements OnInit {
 
   albumCollection= [];
-  searchName: string;
+  searchTitle: string;
+  searchArtist: string;
 
   constructor( private _music: MusicService ) { }
 
@@ -34,8 +35,13 @@ export class DashboardComponent implements OnInit {
     console.log(this.albumCollection)
   }
 
-  searchTerm(data) {
-    this.searchName = data;
+  getTitle(data) {
+    this.searchTitle = data;
+  }
+
+  getArtist(data) {
+    console.log(data);
+    this.searchArtist = data;
   }
 
 }

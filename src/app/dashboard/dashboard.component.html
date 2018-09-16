@@ -1,9 +1,10 @@
-<app-search (searchTerms)="searchTerm($event)"></app-search>
+<app-search (searchTitle)="getTitle($event)" (searchArtist)="getArtist($event)"></app-search>
 
-<div class="container" >
+<div class="albums" >
     <div *ngFor="let item of albumCollection"> 
-        <div *ngIf = "!searchName  || item.name.toLowerCase().search(searchName.toLowerCase()) != -1"  class="card">
-            <img src={{item.url}} width=150px;>                     
+        <div *ngIf = "(!searchTitle  || item.name.toLowerCase().search(searchTitle.toLowerCase()) != -1) &&
+        (!searchArtist  || item.artist.toLowerCase().search(searchArtist.toLowerCase()) != -1)" class="album">
+            <img src={{item.url}}>                     
         </div> 
     </div>
 </div>

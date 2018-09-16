@@ -10,21 +10,23 @@ import { FormGroup, FormControl } from '../../../node_modules/@angular/forms';
 })
 export class SearchComponent implements OnInit {
 
-  @Output() searchTerms = new EventEmitter();
+  @Output() searchTitle = new EventEmitter();
+  @Output() searchArtist = new EventEmitter();
 
   searchBox = new FormGroup ({
-    name: new FormControl()
+    title: new FormControl(),
+    artist: new FormControl()
   })
 
   constructor() { }
 
   ngOnInit() {}
 
-  search(term: string): void {
-    // if (term.length < 2) {
-    //   return
-    // }; 
-    return this.searchTerms.emit(term);
+  emitTitle(term: string): void {
+     return this.searchTitle.emit(term);
   }
+  emitArtist(term: string): void {
+    return this.searchArtist.emit(term);
+ }
 
 }
