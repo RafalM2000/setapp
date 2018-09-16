@@ -1,12 +1,18 @@
+#container {
+    padding: 0 10px 20px 30px;
+    background-color: aquamarine;
+    height: 220px;
+}
+
 h4 {
-    position: fixed;
+    position: absolute;
     top: 0px;
-    left: 570px;
+    left: 0px;
 }
 
 table {
-    position: fixed;
+    position: absolute;
     font-size: 1.5em;
     top: 90px;
-    left: 570px;
+    left: 0px;
 }
