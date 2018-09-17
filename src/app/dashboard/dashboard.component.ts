@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicService } from '../music.service';
 
+import { Album } from '../album';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,14 +10,16 @@ import { MusicService } from '../music.service';
 })
 export class DashboardComponent implements OnInit {
 
-  albumCollection= [];
-  album = {};
+  albumCollection: Album[];
+  album: Album;
   searchTitle: string;
   searchArtist: string;
 
   constructor( private _music: MusicService ) { }
 
   ngOnInit() {
+    this.albumCollection = [];
+
     this._music.getMusicGalery().then(
       (val) => {
                 this.createAlbumCollection(this._music.albumList.feed.entry)
@@ -36,16 +40,16 @@ export class DashboardComponent implements OnInit {
     console.log(this.albumCollection)
   }
 
-  getTitle(data) {
-    this.searchTitle = data;
+  getTitle(data: string) {
+    return this.searchTitle = data;
   }
 
-  getArtist(data) {
-    this.searchArtist = data;
+  getArtist(data: string) {
+    return this.searchArtist = data;
   }
 
-  details(singleAlbum) {
-    this.album = singleAlbum;
+  details(singleAlbum: Album) {
+    return this.album = singleAlbum;
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges} from '@angular/core';
+import { Album } from '../album';
 
 @Component({
   selector: 'app-details',
@@ -7,19 +8,14 @@ import { Component, OnInit, Input, OnChanges} from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-@Input() album: any;
+@Input() album: Album;
 
   constructor() { }
 
   ngOnInit() {
     this.album.name = "not selected";
-    this.album.artist = "not selected";
-    this.album.price = "not selected";
+    this.album.artist = "...";
+    this.album.price = "...";
 
   }
-
-  ngOnChanges() {
-    console.log(this.album);
-  }
-
 }
