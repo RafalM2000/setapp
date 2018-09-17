@@ -13,7 +13,7 @@ export class DetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.album.name = "not selected";
+    this.album.name = "album not selected yet";
     this.album.artist = "...";
     this.album.price = "...";   
 

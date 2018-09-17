@@ -4,6 +4,16 @@
     height: 220px;
 }
 
+@keyframes fontTableSize {
+    from {font-size: 0em; color:white}
+    to {font-size: 1em; color: black }
+}
+
+span {
+    animation-name: fontTableSize;
+    animation-duration: 10s;
+}
+
 h4 {
     position: absolute;
     top: 0px;
