@@ -16,3 +16,17 @@ table {
     top: 90px;
     left: 0px;
 }
+
+@media screen and (max-width: 600px) {
+    input {
+        width: 10em;
+    } 
+
+    h4, table {
+        left: 30px;
+    }
+
+    #container {
+        height: 170px;
+    }
+}

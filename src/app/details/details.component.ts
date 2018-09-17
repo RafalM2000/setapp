@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Album } from '../album';
 
 @Component({
@@ -15,7 +15,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.album.name = "not selected";
     this.album.artist = "...";
-    this.album.price = "...";
+    this.album.price = "...";   
 
   }
 }

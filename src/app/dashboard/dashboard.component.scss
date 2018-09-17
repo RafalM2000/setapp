@@ -34,3 +34,19 @@ img {
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 600px) {
+    app-search {
+        width: 100%;
+    }
+
+    app-details {
+        top: 200px;
+        width: 100%;
+        left: 0px;
+    }
+
+    .albums {
+        top: 400px;
+    }
+}

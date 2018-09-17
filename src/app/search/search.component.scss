@@ -7,3 +7,15 @@
     font-size: 1em;    
     width: 20em;
 }
+
+@media screen and (max-width: 1000px) {
+    input {
+        width: 12em;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+    input {
+        width: 10em;
+    } 
+}

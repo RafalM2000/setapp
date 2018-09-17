@@ -11,7 +11,7 @@ import { Album } from '../album';
 export class DashboardComponent implements OnInit {
 
   albumCollection: Album[];
-  album: Album;
+  album: Album = {name: '', artist: '', url: '', price: ''};
   searchTitle: string;
   searchArtist: string;
 
