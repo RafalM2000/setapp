@@ -10,9 +10,6 @@ import { MusicService } from './music.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
