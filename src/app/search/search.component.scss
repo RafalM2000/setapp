@@ -6,16 +6,12 @@
  input {
     font-size: 1em;    
     width: 20em;
-}
 
-@media screen and (max-width: 1000px) {
-    input {
+    @media screen and (max-width: 1000px) {
         width: 12em;
-    } 
-}
+    }
 
-@media screen and (max-width: 600px) {
-    input {
-        width: 10em;
-    } 
-}
+    @media screen and (max-width: 600px) {
+            width: 10em;
+    }
+ }

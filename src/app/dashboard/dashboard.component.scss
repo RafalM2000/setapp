@@ -8,16 +8,30 @@
 app-search { 
     @include component();
     left: 0px;
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
  }
 
 app-details {
     @include component();
     left: 50%;
+
+    @media screen and (max-width: 600px) {
+        top: 200px;
+        width: 100%;
+        left: 0px;
+    }
 }
 
 .albums {
     position: relative;
     top: 240px;
+
+    @media screen and (max-width: 600px) {
+        top: 400px;
+    }
 }
 
 .album {
@@ -32,21 +46,5 @@ img {
     &:hover {
         border-bottom: 4px solid rgb(59, 133, 56);
         cursor: pointer;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    app-search {
-        width: 100%;
-    }
-
-    app-details {
-        top: 200px;
-        width: 100%;
-        left: 0px;
-    }
-
-    .albums {
-        top: 400px;
     }
 }

@@ -18,6 +18,10 @@ h4 {
     position: absolute;
     top: 0px;
     left: 0px;
+
+    @media screen and (max-width: 600px) {
+        left: 30px;
+    }
 }
 
 table {
@@ -25,18 +29,8 @@ table {
     font-size: 1.5em;
     top: 90px;
     left: 0px;
-}
 
-@media screen and (max-width: 600px) {
-    input {
-        width: 10em;
-    } 
-
-    h4, table {
+    @media screen and (max-width: 600px) {
         left: 30px;
-    }
-
-    #container {
-        height: 170px;
     }
 }
